@@ -6,7 +6,7 @@
     <parameters>
         <param name="mustache" label="mustache.js download URL" type="text"
                volatile="yes" onupgrade="W"
-               default="ftp://ftp.anakeen.com/third-party/mustache.js-@VERSION@.zip"/>
+               default="http://ftp.dynacase.org/third-party/mustache.js-@VERSION@.zip"/>
     </parameters>
 
     <post-install>
