@@ -9,12 +9,24 @@
                default="http://ftp.dynacase.org/third-party/mustache.js-@VERSION@.zip"/>
     </parameters>
 
+    <pre-install>
+        <check type="phpclass" class="ZipArchive">
+            <help>You might need to install a php-zip package from your distribution in order to have ZipArchive support in PHP.</help>
+        </check>
+    </pre-install>
+
     <post-install>
         <download href="@mustache" action="programs/mustache.js_install">
             <label lang="en">Download and install mustache.js @VERSION@
             </label>
         </download>
     </post-install>
+
+    <pre-upgrade>
+        <check type="phpclass" class="ZipArchive">
+            <help>You might need to install a php-zip package from your distribution in order to have ZipArchive support in PHP.</help>
+        </check>
+    </pre-upgrade>
 
     <post-upgrade>
         <download href="@mustache" action="programs/mustache.js_install">
